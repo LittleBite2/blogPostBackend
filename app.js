@@ -4,7 +4,9 @@ const Post = require("./blogPostModel")
 const cors = require("cors")
 const app = express()
 require('dotenv').config()
-
+app.get("/",(req,res)=>{
+    res.send("Hello World")
+})
 
 
 mongoose.connect(process.env.MONGO_URI)
